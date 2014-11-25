@@ -19,31 +19,31 @@ end
 gb_psom_command_matlab = [matlabroot filesep 'bin' filesep 'matlab']; 
 
 % how to invoke octave
-gb_psom_command_octave = [matlabroot filesep 'bin' filesep 'octave']; 
+gb_psom_command_octave = 'octave'; 
 
 % Options for the sge qsub/msub/condor system. For condor, see the help of 
 % psom_condor.sh 
 % Example : '-q all.q@yeatman,all.q@zeus'
 % will force qsub to only use the yeatman and zeus workstations through the
 % queue called all.q
-gb_psom_qsub_options = ''; 
+gb_psom_qsub_options = '-A 041 -q qwork -l walltime=03:00:00'; 
 
 % Options for the shell in batch, qsub, msub or condor modes
 gb_psom_shell_options = ''; 
 
 % Options for the execution mode of the pipeline 
-gb_psom_mode = 'background'; 
+gb_psom_mode = 'qsub'; 
 
 % Options for the execution mode of the pipeline manager
 gb_psom_mode_pm = 'session'; 
 
 % Options for the maximal number of jobs
-gb_psom_max_queued = 2;
+gb_psom_max_queued = 300;
 
 % Default number of attempts of re-submission for failed jobs
 % [] is 0 for session, batch and background modes, and 1 for
 % qsub/msub modes.
-gb_psom_nb_resub = [];
+gb_psom_nb_resub = 5;
 
 % Initialization of matlab
 gb_psom_init_matlab = '';
