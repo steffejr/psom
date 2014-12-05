@@ -26,7 +26,7 @@ gb_psom_command_octave = 'octave';
 % Example : '-q all.q@yeatman,all.q@zeus'
 % will force qsub to only use the yeatman and zeus workstations through the
 % queue called all.q
-gb_psom_qsub_options = '-A mmg-041-aa -l walltime=2424:00:00'; 
+gb_psom_qsub_options = '-A mmg-041-aa -l walltime=01:00:00'; 
 
 % Options for the shell in batch, qsub, msub or condor modes
 gb_psom_shell_options = ''; 
